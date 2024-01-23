@@ -12,7 +12,8 @@ const schema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-    }
+    },
+    imageUrl: String
 })
 
 const User = mongoose.model('User', schema)

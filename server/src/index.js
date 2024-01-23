@@ -1,12 +1,11 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const bcrypt = require('bcrypt')
-const jwt = require('jsonwebtoken')
 
 
 const app = express()
 const PORT = 5000
 const SECRET = 'SECRET'
+module.exports = { SECRET }
 
 
 //Config
