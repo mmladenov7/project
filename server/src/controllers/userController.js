@@ -77,6 +77,15 @@ const userController = {
             res.status(400).send('Invalid email or password')
         }
 
+    },
+    getOne: async (req, res) => {
+        const _id = req.params._id
+        try {
+            const user = await User.findById(_id).select('firstName lastName email imageUrl')
+            res.status(200).send(user)
+        } catch {
+            res.status(404).send('User not found!')
+        }
     }
 }
 
